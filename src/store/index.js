@@ -8,10 +8,10 @@ import appReducers from '../reducers'
 
 export default function configureStore(preloadedState) {
   const middlewares = [loggerMiddleware, thunkMiddleware]
-  const middlewareEnhancer = applyMiddleware(middlewares)
+  const middlewareEnhancer = applyMiddleware(...middlewares)
 
   const enhancers = [middlewareEnhancer]
-  const composedEnhancers = composeWithDevTools(enhancers)
+  const composedEnhancers = composeWithDevTools(...enhancers)
 
   const store = createStore(appReducers, preloadedState, composedEnhancers)
 
