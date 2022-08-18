@@ -8,6 +8,7 @@ const INITIAL_STATE = {
 }
 
 const usersReducer = (state = INITIAL_STATE, action) => {
+    console.log(action.data,"reducer");
     switch (action.type) {
         case GET_USERS_LIST_BEGINS :
             return {...state, isLoading: true}

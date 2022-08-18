@@ -1,0 +1,32 @@
+[
+    {
+      "id": "id",
+      "numeric": false,
+      "disablePadding": true,
+      "label": "ID"
+    },
+    {
+      "id": "name",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "Name"
+    },
+    {
+      "id": "username",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "User Name"
+    },
+    {
+      "id": "email",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "Email"
+    },
+    {
+      "id": "website",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "Website"
+    }
+  ] 
