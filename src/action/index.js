@@ -6,10 +6,10 @@ const getUsersListSuccess = (data) => ({type : GET_USERS_LIST_SUCCESS, data})
 const getUsersListFailure = () => ({type : GET_USERS_LIST_FAILURE})
 
 
-export const actionGetUsersList = () => async (dispatch) => { 
+export const actionGetUsersList = ( _start, _limit) => async (dispatch) => { 
     dispatch(getUsersListBegins())
     try {
-        axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
+        axios.get('https://jsonplaceholder.typicode.com/users', {params : { _start, _limit}}).then(res => {
             const response = res.data
             dispatch(getUsersListSuccess(response))
         })

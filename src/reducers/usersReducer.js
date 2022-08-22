@@ -4,16 +4,16 @@ const INITIAL_STATE = {
     isLoading : false,
     users : {
         data : []
-    }
+    },
+    total : 0,
 }
 
 const usersReducer = (state = INITIAL_STATE, action) => {
-    console.log(action.data,"reducer");
     switch (action.type) {
         case GET_USERS_LIST_BEGINS :
             return {...state, isLoading: true}
         case GET_USERS_LIST_SUCCESS :
-            return { ...state, isLoading: false, users : action.data}
+            return { ...state, isLoading: false, users : action.data, total : 20}
         case GET_USERS_LIST_FAILURE : 
             return { ...state, isLoading: false}
         default :
