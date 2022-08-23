@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useFormik } from "formik";
 import * as yup from "yup";
 import coverImage from "../../assets/images/coverImage.png"
@@ -64,7 +64,6 @@ export default function Login() {
             }
         },
         handleChange: (values) => {
-            console.log(values,"onVhanve");
             const isEmailIncluded = address.includes(values.email)
             setEmailFail(isEmailIncluded)
         }
@@ -154,6 +153,9 @@ export default function Login() {
                         >
                             Sign In
                         </Button>
+                        <Typography component="div" className='signup'>Don't have an account yet?
+                            <Link to="/signup"> Sign Up </Link>
+                        </Typography>
                     </form>
                 </Box>
             </Grid>
